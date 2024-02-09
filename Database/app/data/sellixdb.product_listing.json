@@ -1,0 +1,59 @@
+[
+  {
+  "_id": "65c611bf8768972c6ef2cbcd",
+  "name": "Product 1",
+  "image": "Product 1.jpg",
+  "description": "New Product",
+  "location": "Oulu",
+  "price": 105,
+  "tags": [
+    "Product",
+    "coffee"
+  ],
+  "owner": "user",
+  "buyer": "65c611678768972c6ef2cbcc",
+  "sold": true
+  },
+  {
+  "_id": "65c611d18768972c6ef2cbce",
+  "name": "Product 2",
+  "image": "Product 2.jpg",
+  "description": "New Product",
+  "location": "Helsinki",
+  "price": 60,
+  "tags": [
+    "Product",
+    "New"
+  ],
+  "owner": "user",
+  "sold": false
+  },
+  {
+  "_id": "65c612098768972c6ef2cbcf",
+  "name": "Product 3",
+  "image": "Product 3.jpg",
+  "description": "New Product",
+  "location": "Vantaa",
+  "price": 25.5,
+  "tags": [
+    "Product",
+    "New"
+  ],
+  "owner": "user2",
+  "sold": false
+  },
+  {
+  "_id": "65c6121a8768972c6ef2cbd0",
+  "name": "Product 4",
+  "image": "Product 4.jpg",
+  "description": "New Product 4",
+  "location": "Espoo",
+  "price": 330,
+  "tags": [
+    "Product",
+    "New"
+  ],
+  "owner": "user2",
+  "sold": false
+  }
+]

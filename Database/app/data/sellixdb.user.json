@@ -1,0 +1,26 @@
+[{
+  "_id": "65c611638768972c6ef2cbcb",
+  "username": "user",
+  "email": "user@example.com",
+  "password": "$2b$12$ISuP4GMDwuqX8KOv4raMN.P6IJ9NpckNeGG0YXjqR3IeAhLCyvVgu",
+  "created_products": [
+    "65c611bf8768972c6ef2cbcd",
+    "65c611d18768972c6ef2cbce"
+  ],
+  "purchased_products": [],
+  "favourites": []
+},
+{
+  "_id": "65c611678768972c6ef2cbcc",
+  "username": "user2",
+  "email": "user2@example.com",
+  "password": "$2b$12$eio5HzRSmamC3VQhlrkdxeQ5Kzo4u6E4nFlwb1/lIS7tIcnJEIu6C",
+  "created_products": [
+    "65c612098768972c6ef2cbcf",
+    "65c6121a8768972c6ef2cbd0"
+  ],
+  "purchased_products": [
+    "65c6124a8768972c6ef2cbd1"
+  ],
+  "favourites": []
+}]

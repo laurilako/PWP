@@ -1,0 +1,9 @@
+[{
+  "_id": "65c6124a8768972c6ef2cbd1",
+  "name": "Product 1",
+  "image": "Product 1.jpg",
+  "description": "New Product",
+  "location": "Oulu",
+  "price": 105,
+  "seller": "65c611638768972c6ef2cbcb"
+}]
