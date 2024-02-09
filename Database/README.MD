@@ -1,5 +1,8 @@
 ## SIMPLIFIED FORK FROM PROJECT REPOSITORY FOR DATABASE IMEPLEMENTATION DEADLINE (DL2)
 
+Python 3.12.1
+Mongo 7.0.5
+
 ### 1. Install Mongo community server and MongoDB Compass
 https://www.mongodb.com/try/download/community
 
