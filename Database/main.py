@@ -3,13 +3,10 @@ from flask_bcrypt import Bcrypt
 from flask_mongoengine import MongoEngine
 import json
 import datetime
-
 from flask_jwt_extended import JWTManager
-
 from app.routes.user_routes import user_bp
 from app.routes.products import products_blb
 from app.routes.purchased_products import purchased_products_blb
-
 from app.models.models import User, ProductListing, PurchasedProductListing
 
 app = Flask(__name__)
@@ -33,8 +30,9 @@ app.register_blueprint(purchased_products_blb)
 
 
 # populate the database with test data from JSON files
-
 def populate_db():
+    print("Populating the database with test data...")
+
     with open("app/data/sellixdb.user.json", "r") as f:
         users = json.load(f)
         for user in users:
@@ -63,12 +61,9 @@ def populate_db():
             )
             new_purchased_product.save()
 
-populate_db()
+    print("Database populated with test data.")
 
-# USELESS FOR NOW
-# with app.app_context():
-# from app.services.user_services import UserServicen
-# user_service = UserService()
+populate_db()
 
 if __name__ == "__main__":
     app.run(port=8000, debug=True)

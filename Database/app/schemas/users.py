@@ -1,4 +1,4 @@
-from marshmallow import Schema, fields, ValidationError
+from marshmallow import Schema, fields
 
 class RegisterUser(Schema):
     email = fields.Email(required=True)
