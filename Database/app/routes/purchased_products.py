@@ -1,8 +1,8 @@
 from flask import Blueprint, jsonify
 from flask.views import MethodView
 from flask_smorest import Blueprint
-from app.models.models import PurchasedProductListing
-from flask_jwt_extended import jwt_required
+from app.models.models import ProductListing
+from flask_jwt_extended import jwt_required, get_jwt_identity
 
 purchased_products_blb = Blueprint("purchased_products", __name__, url_prefix="/purchased_products")
 
@@ -11,5 +11,8 @@ purchased_products_blb = Blueprint("purchased_products", __name__, url_prefix="/
 class PurchasedProducts(MethodView):
     @jwt_required()
     def get(self):
-        purchased_products = PurchasedProductListing.get_all()
-        return jsonify(purchased_products), 200
+        # get user that is accessing the endpoint from the token
+        user = get_jwt_identity()
+        # get products that have been purchased by the user
+        purchased = ProductListing.objects(buyer=user).all()
+        return jsonify(purchased), 200

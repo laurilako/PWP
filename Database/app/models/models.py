@@ -10,8 +10,8 @@ class ProductListing(me.Document):
     location = me.StringField(required=True)
     price = me.DecimalField(required=True)
     tags = me.ListField(field=me.StringField(), required=True)
-    owner = me.ReferenceField('User', required=True)
-    buyer = me.ReferenceField('User', required=False)
+    owner = me.StringField(required=True)
+    buyer = me.StringField(required=False)
     created_at = me.DateTimeField(required=True)
     updated_on = me.DateTimeField(required=True)
     sold = me.BooleanField(required=True, default=False)
@@ -26,7 +26,7 @@ class PurchasedProductListing(me.Document):
     description = me.StringField(required=False)
     location = me.StringField(required=False)
     price = me.DecimalField(required=True)
-    seller = me.ReferenceField('User', required=True)
+    seller = me.StringField(required=True)
 
     def get_all():
         return PurchasedProductListing.objects()
@@ -50,5 +50,3 @@ class User(me.Document):
     def check_password(self, password):
         return check_password_hash(self.password, password)
     
-User.register_delete_rule(ProductListing, 'owner', me.CASCADE)
-User.register_delete_rule(PurchasedProductListing, 'seller', me.CASCADE)
