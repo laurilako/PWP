@@ -22,4 +22,4 @@ Database gets automatically populated with test data. Backend can be operated by
 
 Database schema:
 
-![alt text](image.png)
+![alt text](image-1.png)
